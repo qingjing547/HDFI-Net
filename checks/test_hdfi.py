@@ -16,7 +16,6 @@ from ultralytics.nn.modules import DBID, DLB, FCFB, GEB, DRConv, reparameterize_
 from ultralytics.nn.tasks import DetectionModel
 from ultralytics.utils import DEFAULT_CFG_DICT
 
-
 ROOT = Path(__file__).resolve().parents[1]
 CFG = ROOT / "ultralytics/cfg/models/HDFI-Net/HDFI-Net.yaml"
 
