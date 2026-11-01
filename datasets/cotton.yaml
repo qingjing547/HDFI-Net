@@ -1,0 +1,13 @@
+# Replace path with the absolute location of your dataset before training/evaluation.
+# Each image must have a matching YOLO-format labels/*.txt file.
+path: /path/to/cotton_dataset
+train: train/images
+val: val/images
+test: test/images
+
+names:
+  0: BLI
+  1: BS
+  2: GS
+  3: RL
+  4: RSM
