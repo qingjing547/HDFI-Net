@@ -10,7 +10,6 @@ import numpy as np
 import torch
 from PIL import Image
 
-
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
@@ -49,8 +48,9 @@ def main():
         )
         output = temporary / "outputs"
         # Disable optional external logging and package-update checks, not the training implementation.
-        with patch("ultralytics.utils.callbacks.add_integration_callbacks"), patch(
-            "ultralytics.utils.checks.check_pip_update_available", return_value=None
+        with (
+            patch("ultralytics.utils.callbacks.add_integration_callbacks"),
+            patch("ultralytics.utils.checks.check_pip_update_available", return_value=None),
         ):
             with patch.multiple(
                 train_entry,
