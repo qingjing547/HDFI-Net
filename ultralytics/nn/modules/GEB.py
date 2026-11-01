@@ -2,10 +2,10 @@
 """HDFI-Net modules; forward computations retained from the research implementation."""
 
 import torch
-import torch.nn as nn
+from torch import nn
 
 from .conv import Conv
-from .HDFI_common import DRConv, ECA, LRG, PSRT
+from .HDFI_common import ECA, LRG, PSRT, DRConv
 
 
 class GEBottleneck(nn.Module):
@@ -48,7 +48,7 @@ class GEB(nn.Module):
 
     def forward(self, x):
         y = list(self.cv1(x).chunk(2, 1))
-        y.extend((m(y[-1]) for m in self.m))
+        y.extend(m(y[-1]) for m in self.m)
         out = self.cv2(torch.cat(y, 1))
         return self.attention(out)
 
@@ -57,4 +57,4 @@ class GEB(nn.Module):
             m.reparameterize()
 
 
-__all__ = ("GEBottleneck", "GEB")
+__all__ = ("GEB", "GEBottleneck")

@@ -4,8 +4,8 @@
 import math
 
 import torch
-import torch.nn as nn
 import torch.nn.functional as F
+from torch import nn
 
 
 class PSRT(nn.Module):
@@ -135,4 +135,4 @@ def reparameterize_hdfi(model):
     return model
 
 
-__all__ = ("PSRT", "ECA", "DRConv", "LRG", "reparameterize_hdfi")
+__all__ = ("ECA", "LRG", "PSRT", "DRConv", "reparameterize_hdfi")
