@@ -18,15 +18,15 @@ HDFI-Net is a lightweight cotton disease detection model built on **Ultralytics 
 
 The following versions were recorded in the supplied Linux x86-64 environment:
 
-| Component | Version / configuration |
-|---|---|
-| Python | 3.9.24 |
-| PyTorch | 2.7.1+cu118 |
-| Torchvision | 0.22.1+cu118 |
-| PyTorch CUDA runtime | 11.8 |
-| cuDNN | 9.1.0; reported runtime code: 90100 |
-| Ultralytics source | 8.3.240, included in this repository |
-| Reference GPU | NVIDIA A40 |
+| Component            | Version / configuration              |
+| -------------------- | ------------------------------------ |
+| Python               | 3.9.24                               |
+| PyTorch              | 2.7.1+cu118                          |
+| Torchvision          | 0.22.1+cu118                         |
+| PyTorch CUDA runtime | 11.8                                 |
+| cuDNN                | 9.1.0; reported runtime code: 90100  |
+| Ultralytics source   | 8.3.240, included in this repository |
+| Reference GPU        | NVIDIA A40                           |
 
 The GPU is a reference device, not a requirement to use the same model. GPU execution requires a compatible NVIDIA driver. The CUDA version displayed by `nvidia-smi` is the driver's supported CUDA version, not necessarily the runtime used by PyTorch.
 
@@ -116,7 +116,7 @@ cotton_dataset/
 Edit `datasets/cotton.yaml` or provide your own dataset YAML. Fill in the dataset root and preserve the correct class order:
 
 ```yaml
-path: ""  # Fill in the absolute dataset root.
+path: "" # Fill in the absolute dataset root.
 train: train/images
 val: val/images
 test: test/images

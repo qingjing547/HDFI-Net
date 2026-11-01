@@ -17,11 +17,6 @@ Examples:
     >>> subprocess.run(f"onnxslim {f} {f} && open {f}", shell=True, check=True)  # pip install onnxslim
 """
 
-from .DBID import DBID
-from .DLB import DLB, DLBottleneck
-from .FCFB import FCFB, FCFBottleneck
-from .GEB import GEB, GEBottleneck
-from .HDFI_common import DRConv, ECA, LRG, PSRT, reparameterize_hdfi
 from .block import (
     C1,
     C2,
@@ -81,6 +76,11 @@ from .conv import (
     RepConv,
     SpatialAttention,
 )
+from .DBID import DBID
+from .DLB import DLB, DLBottleneck
+from .FCFB import FCFB, FCFBottleneck
+from .GEB import GEB, GEBottleneck
+from .HDFI_common import ECA, LRG, PSRT, DRConv, reparameterize_hdfi
 from .head import (
     OBB,
     Classify,
@@ -108,18 +108,6 @@ from .transformer import (
 )
 
 __all__ = (
-    "DLB",
-    "DLBottleneck",
-    "GEB",
-    "GEBottleneck",
-    "FCFB",
-    "FCFBottleneck",
-    "DBID",
-    "DRConv",
-    "PSRT",
-    "LRG",
-    "ECA",
-    "reparameterize_hdfi",
     "AIFI",
     "C1",
     "C2",
@@ -128,11 +116,18 @@ __all__ = (
     "C3TR",
     "CBAM",
     "CIB",
+    "DBID",
     "DFL",
+    "DLB",
+    "ECA",
     "ELAN1",
+    "FCFB",
+    "GEB",
+    "LRG",
     "MLP",
     "OBB",
     "PSA",
+    "PSRT",
     "SPP",
     "SPPELAN",
     "SPPF",
@@ -159,12 +154,16 @@ __all__ = (
     "Conv",
     "Conv2",
     "ConvTranspose",
+    "DLBottleneck",
+    "DRConv",
     "DWConv",
     "DWConvTranspose2d",
     "DeformableTransformerDecoder",
     "DeformableTransformerDecoderLayer",
     "Detect",
+    "FCFBottleneck",
     "Focus",
+    "GEBottleneck",
     "GhostBottleneck",
     "GhostConv",
     "HGBlock",
@@ -195,5 +194,6 @@ __all__ = (
     "WorldDetect",
     "YOLOEDetect",
     "YOLOESegment",
+    "reparameterize_hdfi",
     "v10Detect",
 )
