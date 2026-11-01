@@ -2,8 +2,8 @@
 """HDFI-Net modules; forward computations retained from the research implementation."""
 
 import torch
-import torch.nn as nn
 import torch.nn.functional as F
+from torch import nn
 
 from .conv import autopad
 
@@ -75,4 +75,4 @@ class DBID(nn.Module):
         return torch.cat([x1, x2], dim=1)
 
 
-__all__ = ("SpatialGuidance", "ChannelGuidance", "DBID", "DBIDConv")
+__all__ = ("DBID", "ChannelGuidance", "DBIDConv", "SpatialGuidance")
