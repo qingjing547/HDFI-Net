@@ -1,4 +1,4 @@
-"""HDFI-Net验证入口；依据原ultralytics/yolov11/val.py整理。
+"""HDFI-Net验证入口；依据原ultralytics/yolov11/val.py整理。.
 
 原文件实际设置split="test"；本文件使用split="val"，独立测试请运行test.py。
 保留原文件的batch=16、NMS IoU=0.60、conf=0.001和workers=4。
@@ -7,7 +7,6 @@
 from pathlib import Path
 
 from ultralytics import YOLO
-
 
 # ===== 使用者自行填写：不提供固定的输入、输出路径 =====
 WEIGHTS_PATH = ""  # 训练得到的可信best.pt路径

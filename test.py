@@ -1,4 +1,4 @@
-"""HDFI-Net测试入口；依据原ultralytics/yolov11/test.py整理。
+"""HDFI-Net测试入口；依据原ultralytics/yolov11/test.py整理。.
 
 使用独立测试集，输出权重文件大小、Precision、Recall、F1、mAP50、
 mAP50-95以及基于预处理、推理、后处理计时的Pipeline FPS。
@@ -7,7 +7,6 @@ mAP50-95以及基于预处理、推理、后处理计时的Pipeline FPS。
 from pathlib import Path
 
 from ultralytics import YOLO
-
 
 # ===== 使用者自行填写：不提供固定的输入、输出路径 =====
 WEIGHTS_PATH = ""  # 训练得到的可信best.pt路径
