@@ -1,4 +1,4 @@
-"""HDFI-Net训练入口；参数依据原ultralytics/yolov11/train.py整理。
+r"""HDFI-Net训练入口；参数依据原ultralytics/yolov11/train.py整理。.
 
 运行前填写下面的输入、输出路径。MODEL_YAML_PATH应指向本项目的
 ultralytics/cfg/models/HDFI-Net/HDFI-Net.yaml，不加载预训练权重。
@@ -8,7 +8,6 @@ Windows路径建议使用原始字符串，例如r"D:\\data\\cotton.yaml"。
 from pathlib import Path
 
 from ultralytics import YOLO
-
 
 # ===== 使用者自行填写：不提供固定的输入、输出路径 =====
 MODEL_YAML_PATH = "HDFI-Net.yaml"  # HDFI-Net.yaml的路径
